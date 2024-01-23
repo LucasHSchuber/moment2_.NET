@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
+<div class="container my-5">
     <div class="text-center">
         <h1 class="display-4">All tasks</h1>
     </div>
@@ -17,14 +17,20 @@
         @foreach (var task in Model)
         {
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">@task.Id . @task.Title</h5>
-                        <p class="card-text">@task.Description</p>
-                    
+                <div class="">
+                    <div class="d-flex">
+                        <div class="rounded-id">
+                            @task.Id
+                        </div>
+                        <div class="px-4">
+                            <h5 class="">@task.Title</h5>
+                            <p class="">@task.Description</p>
+                            <button href="#" onclick="confirmAndRemove('@task.Id')">Remove Task</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <a href="#" onclick="confirmAndRemove('@task.Id')">Remove Task</a>
 
             </div>
         }
@@ -40,3 +46,23 @@
         }
     }
 </script>
+
+
+<style>
+    .rounded-id {
+        padding: 2em;
+        width: 40px;
+        /* Adjust the width as needed */
+        height: 40px;
+        /* Adjust the height as needed */
+        background-color: rgb(187, 38, 100);
+        border-radius: 50%;
+        color: white;
+        /* Optional: Text color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        /* Optional: Adjust font weight */
+    }
+</style>

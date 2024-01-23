@@ -2,31 +2,16 @@
   {
     "Id": 1,
     "Title": "Gör klart uppgiften",
-    "Description": "Måste göras klat asap",
-    "IsCompleted": false
+    "Description": "Måste göras klat asap innan nästa vecka"
   },
   {
     "Id": 2,
     "Title": "Ringa banken",
-    "Description": "Ansöka om lån",
-    "IsCompleted": false
+    "Description": "Ansöka om lån för både mig och kajsa så vi kan köpa lägenhet"
   },
   {
     "Id": 3,
     "Title": "Ringa Simon",
-    "Description": "Surra lite",
-    "IsCompleted": false
-  },
-  {
-    "Id": 4,
-    "Title": "Laga middag till Kajsa",
-    "Description": "Quesadillas",
-    "IsCompleted": false
-  },
-  {
-    "Id": 5,
-    "Title": "test",
-    "Description": "test",
-    "IsCompleted": false
+    "Description": "Surra lite med simon och kolla läget"
   }
 ]

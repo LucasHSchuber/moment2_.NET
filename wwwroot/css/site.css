@@ -8,7 +8,12 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -21,3 +26,78 @@ body {
   margin-bottom: 60px;
 }
 
+
+/* NAVBAR */
+
+
+@media (min-width: 443px) {
+
+  .header {
+    background-color: #BB2664 !important;
+  }
+
+  .navbar {
+    padding: 2em;
+  }
+
+  .navbar-brand {
+    color: white !important;
+    font-size: 1.6em;
+    margin-top: 0.3em;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .nav-item a {
+    color: white !important;
+    margin-left: 2em !important;
+    margin-top: 0.5em;
+    transition: 0.3s;
+    font-weight: 600;
+    padding-bottom: 0.3em;
+    border-bottom: none;
+
+  }
+
+  .nav-item a:hover {
+    /* text-decoration: underline; */
+    color: rgb(231, 231, 231) !important;
+    border-bottom: 0.5px solid rgb(231, 231, 231);
+  }
+}
+
+
+
+/* FORM */
+
+@media (min-width: 767px) {
+
+  form {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+
+/* CONTENT */
+
+.display-4 {
+  font-weight: 600;
+}
+
+/* BUTTION */
+
+.submit-btn {
+  border: 1px solid #BB2664;
+  background-color: inherit;
+  margin-top: 1em;
+  color: #BB2664;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  border: 1px solid #BB2664;
+  background-color: #BB2664;
+  color: white;
+
+}

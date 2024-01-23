@@ -1,11 +1,34 @@
-<!-- About -->
+@model moment2_mvc.Models.TaskModel
 
 @{
-    ViewData["Title"] = "About";
-    
+    ViewData["Title"] = "About me";
 }
 
-<h1>About</h1>
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="display-4 mb-5">About me</h1>
+    </div>
 
-<p>lite text</p>
+    <div class="d-flex justify-content-center">
+        <img src="~/images/lucas_edit.jpg" alt="profile pic" class="profile-pic">
+        <div class="px-5">
+            <h4>Lucas H. Schuber</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum officiis omnis minima tempore,
+                voluptate nesciunt nam consectetur facere, alias ratione enim saepe atque porro asperiores voluptatem
+                sed suscipit.</p>
+            <h5>Have a look at my GitHub?</h5>
+            <a href="https://github.com/LucasHSchuber?tab=repositories" target="_blank">https://github.com/LucasHSchuber</a>
+        </div>
+    </div>
 
+</div>
+
+
+<style>
+    .profile-pic {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
