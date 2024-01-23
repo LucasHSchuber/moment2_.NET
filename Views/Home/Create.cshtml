@@ -1,13 +1,26 @@
-@* @model TaskList
+@model moment2_mvc.Models.TaskModel
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" />
+@{
+    ViewData["Title"] = "Create Task";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Create Task</h1>
     </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Create Task</button>
-</form> *@
+
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <span asp-validation-for="Title"></span>
+            <label asp-for="Title" for="Title">Title:</label>
+            <input asp-for="Title" type="text" class="form-control" id="Title" name="Title" required>
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Description"></span>
+            <label asp-for="Description" for="Description">Description:</label>
+            <textarea asp-for="Description" class="form-control" id="Description" name="Description" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Task</button>
+    </form>
+</div>

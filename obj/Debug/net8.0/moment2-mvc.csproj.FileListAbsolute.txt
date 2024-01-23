@@ -224,3 +224,4 @@
 /Users/lucash.schuber/Desktop/NET/moment2-mvc/obj/Debug/net8.0/moment2-mvc.csproj.AssemblyReference.cache
 /Users/lucash.schuber/Desktop/NET/moment2-mvc/obj/Debug/net8.0/moment2-mvc.csproj.CopyComplete
 /Users/lucash.schuber/Desktop/NET/moment2-mvc/bin/Debug/net8.0/tasks.json
+/Users/lucash.schuber/Desktop/NET/moment2-mvc/obj/Debug/net8.0/moment2-mvc.sourcelink.json
