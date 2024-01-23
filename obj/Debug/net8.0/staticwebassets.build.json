@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3hoTI4R6SpRgvwhtk/F62VLcB+B8B1lafRweyYWSGt0=",
+  "Hash": "K8lQeOe6VUxEjkt2j4M/UGRwAH0c+DbbD66GM10TROw=",
   "Source": "moment2-mvc",
   "BasePath": "_content/moment2-mvc",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon2.ico"
+    },
+    {
+      "Identity": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/images/lucas_edit.jpg",
+      "SourceId": "moment2-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/",
+      "BasePath": "_content/moment2-mvc",
+      "RelativePath": "images/lucas_edit.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/lucas_edit.jpg"
     },
     {
       "Identity": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/js/site.js",

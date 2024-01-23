@@ -1,17 +1,30 @@
 [
   {
     "Id": 1,
+    "UserName": null,
+    "City": null,
     "Title": "Gör klart uppgiften",
-    "Description": "Måste göras klat asap innan nästa vecka"
+    "Description": "Måste göras klart asap innan nästa vecka"
   },
   {
     "Id": 2,
+    "UserName": null,
+    "City": null,
     "Title": "Ringa banken",
     "Description": "Ansöka om lån för både mig och kajsa så vi kan köpa lägenhet"
   },
   {
     "Id": 3,
+    "UserName": null,
+    "City": null,
     "Title": "Ringa Simon",
     "Description": "Surra lite med simon och kolla läget"
+  },
+  {
+    "Id": 4,
+    "UserName": null,
+    "City": null,
+    "Title": "test",
+    "Description": "test"
   }
 ]

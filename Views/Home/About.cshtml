@@ -13,12 +13,15 @@
         <img src="~/images/lucas_edit.jpg" alt="profile pic" class="profile-pic">
         <div class="px-5">
             <h4>Lucas H. Schuber</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum officiis omnis minima tempore,
-                voluptate nesciunt nam consectetur facere, alias ratione enim saepe atque porro asperiores voluptatem
-                sed suscipit.</p>
+            <p>@ViewData["Bio"]</p>
             <h5>Have a look at my GitHub?</h5>
-            <a href="https://github.com/LucasHSchuber?tab=repositories" target="_blank">https://github.com/LucasHSchuber</a>
+            <a href="@ViewBag.GitHub" target="_blank">@ViewBag.GitHub</a>
         </div>
+    </div>
+
+
+    <div class="social">
+        @Html.Partial("_Partial", Model)
     </div>
 
 </div>
@@ -30,5 +33,7 @@
         height: auto;
         display: block;
         margin: 0 auto;
+        border-radius: 3%;
     }
+
 </style>

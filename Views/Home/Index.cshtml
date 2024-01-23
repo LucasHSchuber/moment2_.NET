@@ -13,6 +13,10 @@
         <h2>Task List</h2>
     </div>
 
+    <div class="mt-2 mb-5">
+        <h5>Last post made by @ViewBag.UserName from @ViewBag.City </h5>
+    </div>
+
     <div class="row">
         @foreach (var task in Model)
         {
@@ -35,6 +39,11 @@
             </div>
         }
     </div>
+
+    <div class="social">
+        @Html.Partial("_Partial", Model)
+    </div>
+
 </div>
 
 <script>

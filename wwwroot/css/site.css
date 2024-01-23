@@ -1,3 +1,8 @@
+body,
+html {
+  background-color: rgb(243, 243, 243);
+}
+
 html {
   font-size: 14px;
 }
@@ -22,9 +27,7 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
+
 
 
 /* NAVBAR */
@@ -41,9 +44,9 @@ body {
   }
 
   .navbar-brand {
+    margin-left: 10%;
     color: white !important;
-    font-size: 1.6em;
-    margin-top: 0.3em;
+    font-size: 2em;
     font-weight: 700;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
@@ -100,4 +103,12 @@ body {
   background-color: #BB2664;
   color: white;
 
+}
+
+
+
+/* FOOTER  */
+.footer {
+  height: 10em;
+  background-color: rgb(255, 255, 255) !important;
 }

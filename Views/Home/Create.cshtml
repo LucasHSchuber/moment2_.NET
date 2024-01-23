@@ -11,19 +11,52 @@
 
     <form asp-action="Create" method="post">
         <div asp-validation-summary="ModelOnly"></div>
+
+        <!-- Username -->
         <div class="form-group">
-            <span asp-validation-for="Title"></span>
-            <label asp-for="Title" for="Title">Title:</label>
-            <input asp-for="Title" type="text" class="form-control" id="Title" name="Title" required>
+            <label asp-for="UserName">User Name:</label>
+            <input asp-for="UserName" id="username" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
         </div>
+
+        <!-- DropDownList -->
         <div class="form-group">
-            <span asp-validation-for="Description"></span>
+            <label asp-for="City">Home City:</label>
+            <select asp-for="City" class="form-control">
+                 <option value=""></option>
+                <option value="Stockholm">Stockholm</option>
+                <option value="Sundsvall">Sundsvall</option>
+                <option value="Malmö">Malmö</option>
+            </select>
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+
+        <!-- Title -->
+        <div class="form-group">
+            <label asp-for="Title">Title:</label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
             <label asp-for="Description" for="Description">Description:</label>
-            <textarea asp-for="Description" class="form-control" id="Description" name="Description"
-                required></textarea>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
+
         <button type="submit" class="btn submit-btn">Create Task</button>
     </form>
+
+    <div class="social">
+        @Html.Partial("_Partial", Model)
+    </div>
+
 </div>
 
 
+<style>
+    .form-group{
+        margin-top:0.5em;
+    }
+</style>

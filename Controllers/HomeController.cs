@@ -17,6 +17,8 @@ namespace moment2_mvc.Controllers
 
         public IActionResult About()
         {
+            ViewBag.GitHub = "https://github.com/LucasHSchuber?tab=repositories";
+            ViewData["Bio"] = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum officiis omnis minima tempore voluptate nesciunt nam consectetur facere, alias ratione enim saepe atque porro asperiores voluptatem sed suscipit";
             return View();
         }
 
@@ -25,6 +27,11 @@ namespace moment2_mvc.Controllers
         {
             var jsonStr = System.IO.File.ReadAllText(jsonFilePath);
             var taskList = JsonConvert.DeserializeObject<IEnumerable<TaskModel>>(jsonStr);
+
+            string Citycookie = Request.Cookies["Citycookie"];
+            ViewBag.City = Citycookie;
+            string Usernamecookie = Request.Cookies["Usernamecookie"];
+            ViewBag.Username = Usernamecookie;
             return View(taskList);
         }
 
@@ -59,6 +66,10 @@ namespace moment2_mvc.Controllers
                     var updatedJson = JsonConvert.SerializeObject(tasks, Formatting.Indented);
                     System.IO.File.WriteAllText(jsonFilePath, updatedJson);
 
+                    //set cookie
+                    Response.Cookies.Append("Citycookie", task.City);
+                    Response.Cookies.Append("Usernamecookie", task.UserName);
+
                     return RedirectToAction("Index", "Home");
 
                 }
@@ -90,7 +101,7 @@ namespace moment2_mvc.Controllers
                 var updatedJson = JsonConvert.SerializeObject(tasks, Formatting.Indented);
                 System.IO.File.WriteAllText(jsonFilePath, updatedJson);
             }
-            
+
             return Ok();
         }
 
