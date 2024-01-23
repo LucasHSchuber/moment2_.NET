@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TaskModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">All tasks</h1>
+    </div>
+
+    <div class="py-3">
+        <h2>Task List</h2>
+    </div>
+
+    <div class="row">
+        @foreach (var task in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@task.Title</h5>
+                        <p class="card-text">@task.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <button class="btn btn-primary mt-5" onclick="toggleVisibility()">Toggle Visibility</button>
+    <p id="open" style="visibility:hidden" class="mt-3">Showing</p>
+</div>
+
+<script>
+    function toggleVisibility() {
+        var element = document.getElementById("open");
+        element.style.visibility = element.style.visibility === "visible" ? "hidden" : "visible";
+    }
+</script>
+``
