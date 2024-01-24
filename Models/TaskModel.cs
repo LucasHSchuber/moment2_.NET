@@ -15,10 +15,12 @@ namespace moment2_mvc.Models
     public string? City { get; set; }
 
     [Required]
-    [MaxLength(5)]
+    [MaxLength(20)]
+    [MinLength(5)]
     public string? Title { get; set; }
     [Required]
-    [MaxLength(10)]
+    [MaxLength(200)]
+    [MinLength(5)]
     public string? Description { get; set; }
 
   }

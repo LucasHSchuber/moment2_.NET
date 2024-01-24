@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("moment2-mvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce9637a5aa95e91e9f5cebb90bebf5a83db4ccf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3727db4e00c0155e8cb7ea3fc9641f0cdb1bd848")]
 [assembly: System.Reflection.AssemblyProductAttribute("moment2-mvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("moment2-mvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

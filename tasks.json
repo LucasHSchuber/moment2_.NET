@@ -1,30 +1,16 @@
 [
   {
     "Id": 1,
-    "UserName": null,
-    "City": null,
-    "Title": "Gör klart uppgiften",
-    "Description": "Måste göras klart asap innan nästa vecka"
+    "UserName": "Lucas Schuber",
+    "City": "Stockholm",
+    "Title": "Ring mäklaren",
+    "Description": "Fråga om en bostadsvärdering"
   },
   {
     "Id": 2,
-    "UserName": null,
-    "City": null,
-    "Title": "Ringa banken",
-    "Description": "Ansöka om lån för både mig och kajsa så vi kan köpa lägenhet"
-  },
-  {
-    "Id": 3,
-    "UserName": null,
-    "City": null,
-    "Title": "Ringa Simon",
-    "Description": "Surra lite med simon och kolla läget"
-  },
-  {
-    "Id": 4,
-    "UserName": null,
-    "City": null,
-    "Title": "test",
-    "Description": "test"
+    "UserName": "Lucas Schuber",
+    "City": "Stockholm",
+    "Title": "Kom.Upg.",
+    "Description": "Skriv klart uppgiften i andra kursen och skicka till Hoda"
   }
 ]

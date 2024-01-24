@@ -15,12 +15,8 @@ namespace moment2_mvc.Controllers
     {
         private readonly string jsonFilePath = "tasks.json";
 
-        public IActionResult About()
-        {
-            ViewBag.GitHub = "https://github.com/LucasHSchuber?tab=repositories";
-            ViewData["Bio"] = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum officiis omnis minima tempore voluptate nesciunt nam consectetur facere, alias ratione enim saepe atque porro asperiores voluptatem sed suscipit";
-            return View();
-        }
+
+
 
 
         public IActionResult Index()
@@ -36,6 +32,8 @@ namespace moment2_mvc.Controllers
         }
 
 
+        [Route("/Tasker/Create")]
+
         public IActionResult Create()
         {
 
@@ -43,6 +41,7 @@ namespace moment2_mvc.Controllers
         }
 
         [HttpPost]
+        [Route("/Tasker/Create")]
         public IActionResult Create(TaskModel task)
         {
 
@@ -53,13 +52,30 @@ namespace moment2_mvc.Controllers
                 var jsonStr = System.IO.File.ReadAllText(jsonFilePath);
                 var tasks = JsonConvert.DeserializeObject<List<TaskModel>>(jsonStr);
 
-                if (task != null)
+                if (tasks.Count > 0)
                 {
 
-                    // Assign an ID to the new task
-                    task.Id = tasks.Count + 1;
+                    var last = tasks.Last();
+                    task.Id = last.Id + 1;
 
-                    // Add the new task to the list
+                    tasks.Add(task);
+
+                    // Save the updated task list to the JSON file
+                    var updatedJson = JsonConvert.SerializeObject(tasks, Formatting.Indented);
+                    System.IO.File.WriteAllText(jsonFilePath, updatedJson);
+
+                    //set cookie
+                    Response.Cookies.Append("Citycookie", task.City);
+                    Response.Cookies.Append("Usernamecookie", task.UserName);
+
+                    return RedirectToAction("Index", "Home");
+
+                }
+                else
+                {
+
+                    task.Id = 1;
+
                     tasks.Add(task);
 
                     // Save the updated task list to the JSON file
@@ -83,11 +99,10 @@ namespace moment2_mvc.Controllers
 
 
 
-        [HttpPost]
+
 
         public IActionResult Remove(int id)
         {
-
             var jsonStr = System.IO.File.ReadAllText(jsonFilePath);
             var tasks = JsonConvert.DeserializeObject<List<TaskModel>>(jsonStr);
 
@@ -97,16 +112,25 @@ namespace moment2_mvc.Controllers
             {
                 tasks.Remove(remTask);
 
-                // Save the updated list
                 var updatedJson = JsonConvert.SerializeObject(tasks, Formatting.Indented);
                 System.IO.File.WriteAllText(jsonFilePath, updatedJson);
+
+                return RedirectToAction("Index", "Home");
+                
             }
 
-            return Ok();
+            return NotFound();
         }
 
 
 
+        [Route("/Tasker/About")]
+        public IActionResult About()
+        {
+            ViewBag.GitHub = "https://github.com/LucasHSchuber?tab=repositories";
+            ViewData["Bio"] = "Developer and designer from Stockholm, Sweden. Now looking for job in the tech industry. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum officiis omnis minima tempore voluptate nesciunt nam consectetur facere, alias ratione enim saepe atque porro asperiores voluptatem sed suscipit";
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

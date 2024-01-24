@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/favicon2.ico"
     },
     {
+      "Id": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/images/Lucas_porträtt.jpg",
+      "PackagePath": "staticwebassets/images/Lucas_porträtt.jpg"
+    },
+    {
       "Id": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/images/lucas_edit.jpg",
       "PackagePath": "staticwebassets/images/lucas_edit.jpg"
     },

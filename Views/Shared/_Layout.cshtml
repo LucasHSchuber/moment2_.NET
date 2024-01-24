@@ -21,16 +21,17 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tasker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars" style="color:#fff; font-size:26px;"></i>
+                    </span> </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
-                                asp-action="Create">Create task</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Create">Create
+                                task</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About
@@ -48,8 +49,9 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container d-flex justify-content-center mt-5">
-            &copy; 2024 - moment2_mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container mt-5 footer-box">
+            <a class="navbar-brand-footer" asp-area="" asp-controller="Home" asp-action="Index">Tasker</a>
+            <p>&copy; 2024 - moment2_mvc </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -61,5 +63,8 @@
 </html>
 
 <style>
-
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        border: none;
+    }
 </style>

@@ -32,24 +32,35 @@ html {
 
 /* NAVBAR */
 
+.header {
+  background-color: #BB2664 !important;
+}
 
-@media (min-width: 443px) {
+.navbar {
+  padding: 2.5em;
+}
 
-  .header {
-    background-color: #BB2664 !important;
-  }
+.navbar-brand {
+  margin-top: 0.2em;
+  margin-left: 10%;
+  color: white !important;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-  .navbar {
-    padding: 2em;
-  }
+.nav-item a {
+  color: white !important;
+  margin-top: 1em !important;
+  transition: 0.3s;
+  padding-bottom: 0.3em;
+  font-weight: 600;
+  border-bottom: 0.5px solid transparent;
+  text-align: center;
+}
 
-  .navbar-brand {
-    margin-left: 10%;
-    color: white !important;
-    font-size: 2em;
-    font-weight: 700;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+@media (min-width: 576px) {
+
 
   .nav-item a {
     color: white !important;
@@ -58,8 +69,7 @@ html {
     transition: 0.3s;
     font-weight: 600;
     padding-bottom: 0.3em;
-    border-bottom: none;
-
+    border-bottom: 0.5px solid transparent;
   }
 
   .nav-item a:hover {
@@ -102,13 +112,63 @@ html {
   border: 1px solid #BB2664;
   background-color: #BB2664;
   color: white;
+}
 
+.del-btn {
+  padding: 0.5em 1.3em;
+  border: 1px solid #bb2626;
+  margin-top: 1em;
+  color: #bb2626;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.del-btn:hover {
+  border: 1px solid #bb2626;
+  background-color: #ffd4d4;
+  color: #bb2626;
 }
 
 
 
+
+
+/* TASK LIST */
+
+@media (max-width: 767px) {
+
+  .task-list {
+
+    margin: 0 auto;
+  }
+}
+
+
+/* ABOUT */
+
+@media (max-width: 767px) {
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+
 /* FOOTER  */
 .footer {
-  height: 10em;
+  height: 15em;
   background-color: rgb(255, 255, 255) !important;
+  margin: 0 auto;
+}
+
+.footer-box {
+  width: 50%;
+  text-align: center;
+}
+
+.navbar-brand-footer {
+  color: #BB2664 !important;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

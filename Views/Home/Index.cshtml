@@ -17,7 +17,7 @@
         <h5>Last post made by @ViewBag.UserName from @ViewBag.City </h5>
     </div>
 
-    <div class="row">
+    <div class="row task-list">
         @foreach (var task in Model)
         {
             <div class="col-md-4 mb-4">
@@ -29,13 +29,10 @@
                         <div class="px-4">
                             <h5 class="">@task.Title</h5>
                             <p class="">@task.Description</p>
-                            <button href="#" onclick="confirmAndRemove('@task.Id')">Remove Task</button>
-
+                            <a class="del-btn" asp-controller="Home" asp-action="Remove" asp-route-id=@task.Id>Delete</a>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         }
     </div>
@@ -46,32 +43,19 @@
 
 </div>
 
-<script>
-    function confirmAndRemove(id, event) {
-        event.preventDefault();
-        console.log("test");
-        if (confirm('Are you sure you want to remove this task?')) {
-            window.location.href = '/Home/Remove/' + id;
-        }
-    }
-</script>
-
-
+@* CSS *@
 <style>
     .rounded-id {
         padding: 2em;
         width: 40px;
-        /* Adjust the width as needed */
         height: 40px;
-        /* Adjust the height as needed */
         background-color: rgb(187, 38, 100);
         border-radius: 50%;
         color: white;
-        /* Optional: Text color */
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        /* Optional: Adjust font weight */
     }
+
 </style>

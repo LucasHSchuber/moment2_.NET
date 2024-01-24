@@ -23,10 +23,15 @@
         <div class="form-group">
             <label asp-for="City">Home City:</label>
             <select asp-for="City" class="form-control">
-                 <option value=""></option>
+                <option value=""></option>
+                <option value="Malmö">Malmö</option>
                 <option value="Stockholm">Stockholm</option>
                 <option value="Sundsvall">Sundsvall</option>
-                <option value="Malmö">Malmö</option>
+                <option value="Luleå">Luleå</option>
+                <option value="Umeå">Umeå</option>
+                <option value="Lund">Lund</option>
+                <option value="Göteborg">Göteborg</option>
+
             </select>
             <span asp-validation-for="City" class="text-danger"></span>
         </div>
@@ -56,7 +61,7 @@
 
 
 <style>
-    .form-group{
-        margin-top:0.5em;
+    .form-group {
+        margin-top: 0.5em;
     }
 </style>
