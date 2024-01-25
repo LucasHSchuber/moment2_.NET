@@ -1,16 +1,29 @@
 [
   {
     "Id": 1,
-    "UserName": "Lucas Schuber",
+    "Name": "Lucas Schuber",
+    "Age": null,
     "City": "Stockholm",
     "Title": "Ring mäklaren",
-    "Description": "Fråga om en bostadsvärdering"
+    "Description": "Fråga om en bostadsvärdering",
+    "Color": "#BB2664"
   },
   {
     "Id": 2,
-    "UserName": "Lucas Schuber",
+    "Name": "Lucas Schuber",
+    "Age": null,
     "City": "Stockholm",
     "Title": "Kom.Upg.",
-    "Description": "Skriv klart uppgiften i andra kursen och skicka till Hoda"
+    "Description": "Skriv klart uppgiften i andra kursen och skicka till Hoda",
+    "Color": "#BB2664"
+  },
+  {
+    "Id": 3,
+    "Name": "Lucas Schuber",
+    "Age": null,
+    "City": "Stockholm",
+    "Title": "Sök praktik",
+    "Description": "Skicka mejl till några företag och fråga om de tar emot prakitikanter",
+    "Color": "#BB2664"
   }
 ]

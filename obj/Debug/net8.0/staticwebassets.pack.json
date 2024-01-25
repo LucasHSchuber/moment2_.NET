@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/t.ico",
+      "PackagePath": "staticwebassets/t.ico"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.moment2-mvc.props",
       "PackagePath": "build\\moment2-mvc.props"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5isi6kelWMgfXUUYnhj+0a/vAPr5ZQJjtUiW8unnaXQ=",
+  "Hash": "DFk3nEP8MerWrePF0N9fAEDGMy8P42fmw+9dJFx+8hs=",
   "Source": "moment2-mvc",
   "BasePath": "_content/moment2-mvc",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/t.ico",
+      "SourceId": "moment2-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lucash.schuber/Desktop/NET/moment2-mvc/wwwroot/",
+      "BasePath": "_content/moment2-mvc",
+      "RelativePath": "t.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/t.ico"
     }
   ]
 }

@@ -5,36 +5,61 @@
 }
 
 <div class="container my-5">
-    <div class="text-center">
+    <div class="text-center mb-5">
         <h1 class="display-4">Create Task</h1>
     </div>
 
     <form asp-action="Create" method="post">
         <div asp-validation-summary="ModelOnly"></div>
 
-        <!-- Username -->
+        <!-- Name -->
         <div class="form-group">
-            <label asp-for="UserName">User Name:</label>
-            <input asp-for="UserName" id="username" class="form-control" />
-            <span asp-validation-for="UserName" class="text-danger"></span>
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name" id="name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <!-- Datalist - Home city -->
+        <div class="form-group">
+            <label asp-for="City">Home city</label>
+            <input asp-for="City" class="form-control" list="citylist" placeholder="" />
+            <datalist id="citylist">
+                <option value="Stockholm"></option>
+                <option value="Sundsvall"></option>
+                <option value="Luleå"></option>
+                <option value="Umeå"></option>
+                <option value="Malmö"></option>
+            </datalist>
+            <span asp-validation-for="City" class="text-danger"></span>
+
+        </div>
+
+        <!-- Slider - Age -->
+        <div class="form-group">
+            <label asp-for="Age" for="age">Age:</label>
+            <input asp-for="Age" type="range" id="age" min="0" max="100" step="1" value="50" class="form-control" />
+            <p style="text-align:center;" class="mt-1"><span id="ageinput" value="" style="font-weight:700;">50</span>
+            </p>
         </div>
 
         <!-- DropDownList -->
-        <div class="form-group">
-            <label asp-for="City">Home City:</label>
-            <select asp-for="City" class="form-control">
-                <option value=""></option>
-                <option value="Malmö">Malmö</option>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Sundsvall">Sundsvall</option>
-                <option value="Luleå">Luleå</option>
-                <option value="Umeå">Umeå</option>
-                <option value="Lund">Lund</option>
-                <option value="Göteborg">Göteborg</option>
+        @* <div class="form-group">
+        <label asp-for="City">Home City:</label>
+        <select asp-for="City" class="form-control">
+        <option value=""></option>
+        <option value="Malmö">Malmö</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Sundsvall">Sundsvall</option>
+        <option value="Luleå">Luleå</option>
+        <option value="Umeå">Umeå</option>
+        <option value="Lund">Lund</option>
+        <option value="Göteborg">Göteborg</option>
+        </select>
+        <span asp-validation-for="City" class="text-danger"></span>
+        </div> *@
 
-            </select>
-            <span asp-validation-for="City" class="text-danger"></span>
-        </div>
+
+        <hr class="my-4">
 
         <!-- Title -->
         <div class="form-group">
@@ -50,6 +75,13 @@
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
+        <!-- Colorpicker - Color -->
+        <div class="form-group mt-4">
+            <label asp-for="Color" for="color">Color:</label>
+            <input asp-for="Color" type="color" id="colorPicker" value="#BB2664" onchange="updateColor()">
+            <div id="selectedColor">Selected Color: <span style="font-weight:bold;" id="colorValue">#BB2664</span></div>
+        </div>
+
         <button type="submit" class="btn submit-btn">Create Task</button>
     </form>
 
@@ -60,8 +92,66 @@
 </div>
 
 
+
+
+
+
+@* JAVASCRIPT *@
+@section Scripts {
+    <script>
+
+
+        document.getElementById('age').addEventListener('input', function () {
+            document.getElementById('ageinput').innerText = this.value;
+        });
+
+
+        function updateColor() {
+            var colorPicker = document.getElementById('colorPicker');
+            var selectedColor = colorPicker.value;
+            document.getElementById('colorValue').innerHTML = selectedColor;
+        }
+
+    </script>
+}
+
+@* CSS *@
 <style>
     .form-group {
         margin-top: 0.5em;
+    }
+
+    #age {
+        width: 100%;
+        height: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: rgb(255, 255, 255);
+        border-color: rgb(213, 213, 213);
+        border-radius: 5px;
+        outline: none;
+        margin: 10px 0;
+    }
+
+    #age::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #BB2664;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    input[type="color"] {
+        width: 2em;
+        height: 2em;
+        border: none;
+        cursor: pointer;
+    }
+
+    #selectedColor {
+        padding: 20px;
+        display: inline-block;
     }
 </style>

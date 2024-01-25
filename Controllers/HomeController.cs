@@ -26,8 +26,8 @@ namespace moment2_mvc.Controllers
 
             string Citycookie = Request.Cookies["Citycookie"];
             ViewBag.City = Citycookie;
-            string Usernamecookie = Request.Cookies["Usernamecookie"];
-            ViewBag.Username = Usernamecookie;
+            string namecookie = Request.Cookies["Usernamecookie"];
+            ViewBag.Name = namecookie;
             return View(taskList);
         }
 
@@ -66,7 +66,7 @@ namespace moment2_mvc.Controllers
 
                     //set cookie
                     Response.Cookies.Append("Citycookie", task.City);
-                    Response.Cookies.Append("Usernamecookie", task.UserName);
+                    Response.Cookies.Append("Usernamecookie", task.Name);
 
                     return RedirectToAction("Index", "Home");
 
@@ -84,7 +84,7 @@ namespace moment2_mvc.Controllers
 
                     //set cookie
                     Response.Cookies.Append("Citycookie", task.City);
-                    Response.Cookies.Append("Usernamecookie", task.UserName);
+                    Response.Cookies.Append("Usernamecookie", task.Name);
 
                     return RedirectToAction("Index", "Home");
 

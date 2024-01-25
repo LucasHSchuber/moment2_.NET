@@ -10,10 +10,12 @@ namespace moment2_mvc.Models
     //properties
     public int Id { get; set; }
     [Required]
-    public string? UserName { get; set; }
+    [MinLength(2)]
+    public string? Name { get; set; }
+    [Required]
+    public int? Age { get; set; }
     [Required]
     public string? City { get; set; }
-
     [Required]
     [MaxLength(20)]
     [MinLength(5)]
@@ -22,6 +24,8 @@ namespace moment2_mvc.Models
     [MaxLength(200)]
     [MinLength(5)]
     public string? Description { get; set; }
+
+    public string? Color { get; set; }
 
   }
 
