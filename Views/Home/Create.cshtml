@@ -34,12 +34,16 @@
 
         </div>
 
-        <!-- Slider - Age -->
+        <!-- Slider - Prio -->
         <div class="form-group">
-            <label asp-for="Age" for="age">Age:</label>
-            <input asp-for="Age" type="range" id="age" min="0" max="100" step="1" value="50" class="form-control" />
-            <p style="text-align:center;" class="mt-1"><span id="ageinput" value="" style="font-weight:700;">50</span>
-            </p>
+            <label asp-for="Prio" for="prio">Prioritize:</label>
+            <input asp-for="Prio" type="range" id="prio" min="0" max="10" step="1" value="5" class="form-control" />
+            <div class="d-flex justify-content-between">
+                <p style="text-align:center;" class="mt-1"><span style="font-weight:700;">Low</span>
+                <p style="text-align:center;" class="mt-1"><span id="prioinput" value=""
+                        style="font-weight:700;">5</span>
+                <p style="text-align:center;" class="mt-1"><span style="font-weight:700;">High</span></p>
+            </div>
         </div>
 
         <!-- DropDownList -->
@@ -101,8 +105,8 @@
     <script>
 
 
-        document.getElementById('age').addEventListener('input', function () {
-            document.getElementById('ageinput').innerText = this.value;
+        document.getElementById('prio').addEventListener('input', function () {
+            document.getElementById('prioinput').innerText = this.value;
         });
 
 
@@ -121,7 +125,7 @@
         margin-top: 0.5em;
     }
 
-    #age {
+    #prio {
         width: 100%;
         height: 10px;
         -webkit-appearance: none;
@@ -133,7 +137,7 @@
         margin: 10px 0;
     }
 
-    #age::-webkit-slider-thumb {
+    #prio::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 15px;

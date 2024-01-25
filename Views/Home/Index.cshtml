@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<moment2_mvc.Models.TaskModel>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="container my-5">
@@ -14,23 +14,26 @@
     </div>
 
     <div class="mt-2 mb-5">
-        <h5>Last post made by @ViewBag.Name from @ViewBag.City </h5>
+        @* <h5>Last post made by @ViewBag.Name from @ViewBag.City </h5> *@
+        <h5>Last post title: "@ViewBag.T" </h5>
     </div>
 
     <div class="row task-list">
         @foreach (var task in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="">
-                    <div class="d-flex">
-                        <div style="background-color: @task.Color" class="rounded-id">
-                            @task.Id
-                        </div>
-                        <div class="px-4">
-                            <h5 class="">@task.Title</h5>
+            <div class="col-md-4 mb-5">
+                <div class="d-flex mb-3">
+                    <div style="background-color: @task.Color" class="rounded-id">
+                        @task.Id
+                    </div>
+                    <div class="px-4">
+                        <div class="mb-4">
+                            <h5>@task.Title</h5>
+                            <p style="font-size:0.7em;margin-top:-0.5em;">Prio: @task.Prio</p>
+                            <p style="font-size:0.7em;margin-top:-1.2em;">By: @task.Name, @task.City</p>
                             <p class="">@task.Description</p>
-                            <a class="del-btn" asp-controller="Home" asp-action="Remove" asp-route-id=@task.Id>Delete</a>
                         </div>
+                        <a class="del-btn" asp-controller="Home" asp-action="Remove" asp-route-id=@task.Id>Delete</a>
                     </div>
                 </div>
             </div>
@@ -49,13 +52,11 @@
         padding: 2em;
         width: 40px;
         height: 40px;
-        @* background-color: rgb(187, 38, 100); *@
-        border-radius: 50%;
+    @*background-color:rgb(187,38,100);*@border-radius: 50%;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
     }
-
 </style>

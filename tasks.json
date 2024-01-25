@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Name": "Lucas Schuber",
-    "Age": null,
+    "Prio": 1,
     "City": "Stockholm",
     "Title": "Ring mäklaren",
     "Description": "Fråga om en bostadsvärdering",
@@ -11,7 +11,7 @@
   {
     "Id": 2,
     "Name": "Lucas Schuber",
-    "Age": null,
+    "Prio": 10,
     "City": "Stockholm",
     "Title": "Kom.Upg.",
     "Description": "Skriv klart uppgiften i andra kursen och skicka till Hoda",
@@ -19,11 +19,20 @@
   },
   {
     "Id": 3,
-    "Name": "Lucas Schuber",
-    "Age": null,
+    "Name": "Lucas Hammarstrand Schuber",
+    "Prio": 6,
+    "City": "Stockholm",
+    "Title": "Ät lunch",
+    "Description": "Gör burrito till lunch",
+    "Color": "#bb2664"
+  },
+  {
+    "Id": 4,
+    "Name": "Lucas Hammarstrand Schuber",
+    "Prio": 7,
     "City": "Stockholm",
     "Title": "Sök praktik",
-    "Description": "Skicka mejl till några företag och fråga om de tar emot prakitikanter",
-    "Color": "#BB2664"
+    "Description": "Skicka mejl och ansök om praktik",
+    "Color": "#bb2664"
   }
 ]

@@ -13,7 +13,7 @@ namespace moment2_mvc.Models
     [MinLength(2)]
     public string? Name { get; set; }
     [Required]
-    public int? Age { get; set; }
+    public int? Prio { get; set; }
     [Required]
     public string? City { get; set; }
     [Required]
